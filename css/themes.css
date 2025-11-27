@@ -1,0 +1,159 @@
+/* ========================================
+   THEME STYLES - LIGHT & DARK MODE
+   ======================================== */
+
+/* Dark Theme */
+body.dark-theme {
+  --bg-primary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  --bg-secondary: #2d3748;
+  --bg-card: rgba(45, 55, 72, 0.95);
+  --text-primary: #f7fafc;
+  --text-secondary: #cbd5e0;
+  --text-light: #718096;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --accent-color: #7c3aed;
+  --accent-hover: #6d28d9;
+}
+
+/* Theme transition for smooth color changes */
+body, 
+.navbar,
+.card,
+.search-container,
+button,
+input {
+  transition: background 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Dark theme specific adjustments */
+body.dark-theme .main-title,
+body.dark-theme .subtitle {
+  color: var(--text-primary);
+}
+
+body.dark-theme .search-container {
+  background: rgba(45, 55, 72, 0.9);
+  border: 1px solid var(--border-color);
+}
+
+body.dark-theme #city {
+  color: var(--text-primary);
+}
+
+body.dark-theme #city::placeholder {
+  color: var(--text-light);
+}
+
+body.dark-theme .gps-btn {
+  background: rgba(124, 58, 237, 0.2);
+  color: var(--accent-color);
+}
+
+body.dark-theme .gps-btn:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+body.dark-theme .chip {
+  background: rgba(124, 58, 237, 0.2);
+  color: var(--accent-color);
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+body.dark-theme .chip:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+body.dark-theme .detail-item {
+  background: rgba(124, 58, 237, 0.1);
+}
+
+body.dark-theme .detail-item:hover {
+  background: rgba(124, 58, 237, 0.15);
+}
+
+body.dark-theme .sun-item {
+  background: rgba(124, 58, 237, 0.1);
+}
+
+body.dark-theme .forecast-card {
+  background: rgba(45, 55, 72, 0.9);
+  border: 1px solid var(--border-color);
+}
+
+body.dark-theme .current-weather {
+  background: linear-gradient(135deg, rgba(45, 55, 72, 0.95) 0%, rgba(45, 55, 72, 0.85) 100%);
+}
+
+/* Theme toggle icon rotation */
+body.dark-theme .theme-toggle i::before {
+  content: '\f185'; /* fa-sun */
+}
+
+/* Smooth icon transition */
+.theme-toggle i {
+  transition: transform 0.3s ease;
+}
+
+body.dark-theme .theme-toggle:hover i {
+  transform: rotate(180deg);
+}
+
+/* Chart adjustments for dark theme */
+body.dark-theme canvas {
+  filter: brightness(0.9);
+}
+
+/* Weather icon glow effect in dark mode */
+body.dark-theme .weather-icon-container img {
+  filter: drop-shadow(0 0 20px rgba(124, 58, 237, 0.5));
+}
+
+/* Suggestion dropdown dark theme */
+body.dark-theme .suggestions {
+  background: rgba(45, 55, 72, 0.95);
+  border: 1px solid var(--border-color);
+}
+
+body.dark-theme .suggestion-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+body.dark-theme .suggestion-item:hover {
+  background: rgba(124, 58, 237, 0.2);
+}
+
+/* Loading and error states */
+body.dark-theme .loading-state,
+body.dark-theme .error-state {
+  background: rgba(45, 55, 72, 0.95);
+  border: 1px solid var(--border-color);
+}
+
+/* Footer dark theme */
+body.dark-theme .footer {
+  background: rgba(45, 55, 72, 0.95);
+}
+
+/* Scrollbar dark theme */
+body.dark-theme ::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+}
+
+/* Focus states for accessibility */
+body.dark-theme button:focus,
+body.dark-theme input:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
