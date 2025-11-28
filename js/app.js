@@ -5,15 +5,17 @@
  */
 
 import { fetchWeatherData, fetchForecastData } from './api.js';
-import { 
-  displayCurrentWeather, 
-  displayForecast, 
+import {
+  displayCurrentWeather,
+  displayForecast,
   displayCharts,
-  showLoading, 
-  hideLoading, 
+  showLoading,
+  hideLoading,
   showError,
   updateBackground,
-  initThemeToggle
+  initThemeToggle,
+  initMap,
+  updateMap
 } from './ui.js';
 import { 
   saveRecentSearch, 
@@ -45,10 +47,13 @@ let currentWeatherData = null;
  */
 function initApp() {
   console.log('🌤️ Weather Forecast Pro - Initializing...');
-  
+
   // Initialize theme
   initThemeToggle();
-  
+
+  // Initialize map
+  initMap();
+
   // Load recent searches and favorites
   loadQuickAccess();
   
@@ -188,6 +193,7 @@ function displayWeatherData(data) {
   displayCurrentWeather(data);
   updateBackground(data.weather[0].main, isNightTime(data.sys.sunset));
   updateFavoriteButton();
+  updateMap(data.coord.lat, data.coord.lon, data.name);
   weatherSection.classList.remove('hidden');
   weatherSection.classList.add('animate-fadeInUp');
 }
