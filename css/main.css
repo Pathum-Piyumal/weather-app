@@ -667,6 +667,18 @@ body {
 }
 
 /* ========================================
+   MAP SECTION
+   ======================================== */
+
+.map-container h3 {
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--text-xl);
+}
+
+/* ========================================
    FOOTER
    ======================================== */
 

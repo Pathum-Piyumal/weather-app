@@ -4,7 +4,7 @@
 
 const CONFIG = {
   // API Configuration
-  API_KEY: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`, // Replace with your API key
+  API_KEY: '061ded5e797cb968b3384920c6929bc4', // Your API key
   API_BASE_URL: 'https://api.openweathermap.org/data/2.5',
   
   // API Endpoints
